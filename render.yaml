@@ -2,10 +2,8 @@ services:
   - type: web
     name: world-football-backend
     env: python
-    startCommand: "./start.sh"
     buildCommand: "pip install -r backend/requirements.txt"
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "uvicorn main:app --host 0.0.0.0 --port 10000"
+    startCommand: "./start.sh"
     plan: free
     envVars:
       - key: API_KEY
