@@ -19,7 +19,7 @@ function PredictionForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://worl-football-ai.onrender.com', formData);
+      const res = await axios.post('https://worl-football-ai.onrender.com/predict', formData);
       setResult(res.data.prediction);
     } catch (err) {
       setResult("Fehler bei der Vorhersage");
